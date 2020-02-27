@@ -1,28 +1,33 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang="html">
+<div id="app">
+  <bookings-form></bookings-form>
+  <hr>
+  <bookings-update-form></bookings-update-form>
+  <hr>
+  <bookings></bookings>
+
+</div>
 </template>
 
+
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Bookings from './components/Bookings.vue';
+import BookingsForm from './components/BookingsForm';
+import BookingsUpdateForm from './components/BookingsUpdateForm';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+name: 'app',
+components: {
+  'bookings': Bookings,
+  'bookings-form': BookingsForm,
+  'bookings-update-form': BookingsUpdateForm
+}
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+
+
+<style lang="css" scoped>
 </style>

@@ -62,6 +62,7 @@ router.delete('/:id', (req, res) => {
 
 //Update route
 router.put('/:id', (req, res) => {
+  console.log(req);
   const id = req.params.id;
   const updatedData = req.body;
   collection
